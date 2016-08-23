@@ -29,7 +29,7 @@ Plugin 'xolox/vim-misc'
 " Plugin 'xolox/vim-easytags'
 
 " Sublime-style fuzzy search
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " Easily switching between source and header files
 Plugin 'vim-scripts/a.vim'
@@ -87,7 +87,7 @@ Plugin 'scrooloose/nerdtree'
 " m to add/delete/copy/rename files and directories
 " C to make the dir under the cursor as the top directory
 " r to refresh (R to refresh root)
-
+"
 Plugin 'terryma/vim-multiple-cursors'
 " be everywhere at once!
 " <Ctrl>-N to select subsequent instances of the current word
@@ -108,6 +108,16 @@ call vundle#end()
 " HERE for things to work properly
 filetype plugin indent on
 au FileType * setlocal fo-=cro
+
+" allow mouse usage
+set mouse=a
+
+" config NERDTree
+" auto-start NERDTree to cwd
+autocmd VimEnter * NERDTreeCWD
+autocmd VimEnter * wincmd p
+" show hidden files
+let NERDTreeShowHidden=1
 
 " search options
 set incsearch       " start searching immediately
@@ -173,6 +183,7 @@ set visualbell
 set t_vb=
 
 " navigation...
+set cursorline                  " highlight cursor line"
 set backspace=indent,eol,start
 set whichwrap+=<,>,[,]
 set ch=2
@@ -185,6 +196,9 @@ set showmode
 set cmdheight=2                 " bigger command-line
 " set nomousehide               " uncomment if you're using a touchpad
                                 " and it's driving you insane
+
+" use ; for commands instead of : (don't have to hold shift)
+nnoremap ; :
 
 " file navigation...
 set autoread                    " update the file in Vim if it changes outside
@@ -212,7 +226,8 @@ set termencoding=utf-8
 
 " mappings and abbreviations
 let mapleader = ","
-inoremap jj <Esc>           " jj exits insert mode if typed quickly
+inoremap ll <End>
+inoremap jj <Esc>" jj exits insert mode if typed quickly
 map <Ctrl>w<down> <Ctrl>wj  " more window nav shortcuts
 map <Ctrl>w<up> <Ctrl>wk
 inoremap ,, <Tab>           " ,, works as a tab in insert mode if typed quickly
@@ -227,6 +242,7 @@ let NERDSpaceDelims=1       " spaces! in comments! YAY!
 " NERDTree
 let NERDTreeChDirMode=2     " use the top dir in NERDTree as the working dir
 let NERDTreeShowHidden=0    " don't show hidden files ('I' toggles this)
+nnoremap <f1> :NERDTreeToggle<CR>   " use f1 as toggle for NERDTree
 " DelimitMate
 let delimitMate_expand_cr=1
 " Syntastic
