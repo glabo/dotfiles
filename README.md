@@ -19,6 +19,7 @@ files if they exist.
 
 #### Vundle
     git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    open vim, run :PluginInstall
 
 ## Applications
 * [Chrome](https://support.google.com/chrome/answer/95346?hl=en)
