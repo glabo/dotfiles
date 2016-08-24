@@ -16,11 +16,11 @@ alias dgr='a dut grab'
 alias actags='ctags -R --python-kinds=+cfmv --langmap=Python:+"(__init__)" --langmap=c++:+.tin --extra=+fq --fields=+im .'
 
 # make vim the standard editor
-
 export EDITOR=vim
 
 # allow for vim colors
 alias tmux="TERM=xterm-256color tmux"
+alias tmat='tmux attach'
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
