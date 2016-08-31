@@ -5,6 +5,15 @@ alias c='clear'
 alias reload='source ~/.bashrc'
 alias bashrc='vim ~/.bashrc'
 
+# git alias for pushing dotfiles
+alias pushdotfiles='tempDir=$PWD && \
+                     cd ~/.vim && \
+                     git add . && \
+                     git commit && \
+                     git push origin master && \
+                     cd $tempDir && \
+                     unset tempDir'
+
 # arista aliases
 alias ch='a ws ch'
 alias dli='a dut list'
