@@ -3,10 +3,11 @@ alias l='ls'
 alias la='ls -a'
 alias c='clear'
 alias reload='source ~/.bashrc'
+alias bashrc='vim ~/.bashrc'
 
 # arista aliases
 alias ch='a ws ch'
-alias dl='a dut list'
+alias dli='a dut list'
 alias dsa='a dut sanitize'
 alias dup='a dut update'
 alias dat='a dut attach'
@@ -14,6 +15,7 @@ alias din='a dut info'
 alias dre='a dut release'
 alias dgr='a dut grab'
 alias actags='ctags -R --python-kinds=+cfmv --langmap=Python:+"(__init__)" --langmap=c++:+.tin --extra=+fq --fields=+im .'
+alias searchtest='ls -R | grep '.py' | grep -ER '
 
 # make vim the standard editor
 export EDITOR=vim

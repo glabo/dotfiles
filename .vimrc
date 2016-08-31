@@ -226,7 +226,7 @@ set termencoding=utf-8
 
 " mappings and abbreviations
 let mapleader = ","
-inoremap ll <End>
+inoremap ;; <End>
 inoremap jj <Esc>" jj exits insert mode if typed quickly
 map <Ctrl>w<down> <Ctrl>wj  " more window nav shortcuts
 map <Ctrl>w<up> <Ctrl>wk
