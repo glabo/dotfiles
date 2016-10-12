@@ -9,6 +9,9 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/vundle'
 
+" CTag highlighting
+Plugin 'kendling/taghighlight'
+
 Plugin 'editorconfig/editorconfig-vim'
 " adds support for .editorconfig files
 
@@ -172,7 +175,7 @@ au BufNewFile,BufRead *.erb set filetype=html
 syntax on
 set showmatch
 set background=dark
-color codeschool
+color badwolf
 
 " some nice HAML folding
 set foldmethod=manual
