@@ -18,20 +18,27 @@ alias pushdotfiles='tempDir=$PWD && \
 alias cpj='python ~/trees/ChangeProject.py'
 alias ch='a ws ch'
 alias dli='a dut list'
+alias dgrep='a dut list -f | grep '
+alias dgrepa='a dut list -a | grep '
 alias dsa='a dut sanitize'
 alias dup='a dut update'
 alias dat='a dut attach'
 alias din='a dut info'
 alias dre='a dut release'
 alias dgr='a dut grab'
+alias wup='a ws up'
 alias edit='a p4 edit'
+alias ictags='a4 yum install -y --enablerepo=* ctags'
 alias actags='ctags -R --python-kinds=+cfmv --langmap=Python:+"(__init__)" --langmap=c++:+.tin --extra=+fq --fields=+im .'
-alias searchtest='ls -R | grep '.py' | grep -ER '
+alias searchtest='find -name *.py -exec grep -H '
 alias kick='Abuildd -f $WP'
 alias check='ap abuild -q -m 10 -p '
+alias atest='AutoTest --notify=glabossiere --skipTestbedCheck -a --logDir=/tmp --testListFile=/tmp/test-list --algorithm=fixed'
 
 # make vim the standard editor
 export EDITOR=vim
+# set timezone
+export TZ="/usr/share/zoneinfo/US/Eastern"
 # custom PS1
 #export PS1="[\[$(tput sgr0)\]\[\033[38;5;2m\]\$?\[$(tput sgr0)\]\[\033[38;5;15m\]]\[$(tput sgr0)\]\[\033[38;5;160m\]\A\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;3m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\] @\[$(tput sgr0)\]\[\033[38;5;3m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\]\n\\$\[$(tput sgr0)\]"
 #export PS1='\[\e[0;33m\]\u@\h: \w/\n[$?] [\t]\$ '
